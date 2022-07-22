@@ -175,6 +175,7 @@ but disabled since the package is blacklisted (or not whitelisted) in the config
         ' -v $WORKSPACE/binarydeb:/tmp/binarydeb' +
         (' -v $HOME/.ccache:/home/buildfarm/.ccache' if shared_ccache else '') +
         ' binarydeb_build.%s_%s_%s_%s_%s' % (rosdistro_name, os_name, os_code_name, arch, pkg_name),
+        'cp -r $WORKSPACE/binarydeb/* /home/willshih/ros_humble_binarydeb'
         'echo "# END SECTION"',
     ]),
 ))@

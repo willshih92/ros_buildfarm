@@ -43,6 +43,7 @@
     branch_name=ros_buildfarm_repository.version or 'master',
     relative_target_dir='ros_buildfarm',
     refspec=None,
+    git_ssh_credential_id=git_ssh_credential_id,
 ))@
   <scmCheckoutRetryCount>2</scmCheckoutRetryCount>
   <assignedNode>agent_on_master</assignedNode>
@@ -50,12 +51,12 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
+  <!--triggers>
 @(SNIPPET(
     'trigger_timer',
     spec='0 23 * * *',
 ))@
-  </triggers>
+  </triggers-->
   <concurrentBuild>false</concurrentBuild>
   <builders>
 @(SNIPPET(
